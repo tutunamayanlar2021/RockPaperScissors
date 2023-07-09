@@ -85,7 +85,6 @@
 				1529F9772A58788A00222E72 /* View */,
 				1529F9632A58786700222E72 /* AppDelegate.swift */,
 				1529F9652A58786700222E72 /* SceneDelegate.swift */,
-				1529F9672A58786700222E72 /* ViewController.swift */,
 				1529F9692A58786700222E72 /* Main.storyboard */,
 				1529F96C2A58786800222E72 /* Assets.xcassets */,
 				1529F96E2A58786800222E72 /* LaunchScreen.storyboard */,
@@ -114,6 +113,7 @@
 		1529F9792A58789F00222E72 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1529F9672A58786700222E72 /* ViewController.swift */,
 				1529F97E2A5887BD00222E72 /* ResultViewController.swift */,
 			);
 			path = Controller;
