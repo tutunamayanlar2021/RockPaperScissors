@@ -18,6 +18,11 @@
 		1529F97D2A587E0500222E72 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1529F97C2A587E0500222E72 /* GameState.swift */; };
 		1529F97F2A5887BD00222E72 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1529F97E2A5887BD00222E72 /* ResultViewController.swift */; };
 		1542D6752A5AE92B0027032C /* C.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1542D6742A5AE92B0027032C /* C.wav */; };
+		1542D6782A5AEFCC0027032C /* A.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1542D6772A5AEFCB0027032C /* A.wav */; };
+		1542D67A2A5AEFE70027032C /* E.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1542D6792A5AEFE70027032C /* E.wav */; };
+		1542D67C2A5AF2DF0027032C /* fail.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1542D67B2A5AF2DF0027032C /* fail.mp3 */; };
+		1542D67E2A5AF5D00027032C /* tie.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1542D67D2A5AF5D00027032C /* tie.mp3 */; };
+		1542D6802A5AF71A0027032C /* won.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1542D67F2A5AF71A0027032C /* won.mp3 */; };
 		B330EC5D2A5AC43A00B60743 /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B330EC5C2A5AC43A00B60743 /* UIStoryboard.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +40,11 @@
 		1529F97C2A587E0500222E72 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		1529F97E2A5887BD00222E72 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		1542D6742A5AE92B0027032C /* C.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = C.wav; sourceTree = "<group>"; };
+		1542D6772A5AEFCB0027032C /* A.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = A.wav; sourceTree = "<group>"; };
+		1542D6792A5AEFE70027032C /* E.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = E.wav; sourceTree = "<group>"; };
+		1542D67B2A5AF2DF0027032C /* fail.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fail.mp3; sourceTree = "<group>"; };
+		1542D67D2A5AF5D00027032C /* tie.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tie.mp3; sourceTree = "<group>"; };
+		1542D67F2A5AF71A0027032C /* won.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = won.mp3; sourceTree = "<group>"; };
 		B330EC5C2A5AC43A00B60743 /* UIStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,7 +78,7 @@
 		1529F9622A58786700222E72 /* RockPaperScissors */ = {
 			isa = PBXGroup;
 			children = (
-				1542D66F2A5AE49F0027032C /* Sound */,
+				1542D6762A5AEF8F0027032C /* Sounds */,
 				B330EC5A2A5AC42900B60743 /* Common */,
 				1529F9792A58789F00222E72 /* Controller */,
 				1529F9782A58789300222E72 /* Model */,
@@ -109,12 +119,17 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		1542D66F2A5AE49F0027032C /* Sound */ = {
+		1542D6762A5AEF8F0027032C /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				1542D67F2A5AF71A0027032C /* won.mp3 */,
+				1542D67D2A5AF5D00027032C /* tie.mp3 */,
+				1542D67B2A5AF2DF0027032C /* fail.mp3 */,
+				1542D6792A5AEFE70027032C /* E.wav */,
+				1542D6772A5AEFCB0027032C /* A.wav */,
 				1542D6742A5AE92B0027032C /* C.wav */,
 			);
-			path = Sound;
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 		B330EC5A2A5AC42900B60743 /* Common */ = {
@@ -191,9 +206,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1542D6802A5AF71A0027032C /* won.mp3 in Resources */,
+				1542D67A2A5AEFE70027032C /* E.wav in Resources */,
+				1542D67E2A5AF5D00027032C /* tie.mp3 in Resources */,
 				1542D6752A5AE92B0027032C /* C.wav in Resources */,
 				1529F9702A58786800222E72 /* LaunchScreen.storyboard in Resources */,
 				1529F96D2A58786800222E72 /* Assets.xcassets in Resources */,
+				1542D67C2A5AF2DF0027032C /* fail.mp3 in Resources */,
+				1542D6782A5AEFCC0027032C /* A.wav in Resources */,
 				1529F96B2A58786700222E72 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

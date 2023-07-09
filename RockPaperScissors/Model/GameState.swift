@@ -26,6 +26,7 @@ class Game {
                     (userGuess == .paper && computerGuess == .rock) ||
                     (userGuess == .scissors && computerGuess == .paper) {
             updateUserScore()
+            
             return .win
         } else {
             updateComputerScore()

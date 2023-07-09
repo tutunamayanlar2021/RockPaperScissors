@@ -33,7 +33,6 @@ class ViewController: UIViewController,ResultViewControllerDelegate {
     var computerChoice: Guess?
     var gameState: GameState?
     var game = Game()
-    var player: AVAudioPlayer!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -64,6 +63,16 @@ class ViewController: UIViewController,ResultViewControllerDelegate {
         imageView.stopAnimating()
         userScoreLabel.text = "You :\(game.userScore)"
         computerScoreLabel.text = "Computer :\(game.computerScore)"
+        switch gameState {
+                case .win:
+                    playSound(soundName: "won", ext: "mp3")
+                case .lose:
+                    playSound(soundName: "fail", ext: "mp3")
+                case .tie:
+                    playSound(soundName: "tie", ext: "mp3")
+                default:
+                    break
+                }
         
         if let controller: ResultViewController = storyboard?.instantiateViewController() {
             controller.gameState = gameState
@@ -82,14 +91,16 @@ class ViewController: UIViewController,ResultViewControllerDelegate {
             case rockImage:
                 userChoice = .rock
                 imageView.startAnimating()
-                playSound()
+                playSound(soundName: "C",ext: "wav")
                 
             case paperImage:
                 userChoice = .paper
                 imageView.startAnimating()
+                playSound(soundName: "E",ext: "wav")
             case scissorsImage:
                 userChoice = .scissors
                 imageView.startAnimating()
+                playSound(soundName: "A",ext: "wav")
             default:
                 userChoice = nil
             }
@@ -99,14 +110,17 @@ class ViewController: UIViewController,ResultViewControllerDelegate {
                 print("computerChoice \(computerChoice?.rawValue ?? "")")
                 print("user \(userChoice.rawValue)")
                 print("Game state: \(gameState?.rawValue ?? "empty")")
+                
             }
         }
     }
-    func playSound() {
-        if let soundURL = Bundle.main.url(forResource: "C", withExtension: "wav", subdirectory: "Sound") {
+    var player: AVAudioPlayer?
+
+    func playSound(soundName: String ,ext: String?) {
+        if let soundURL = Bundle.main.url(forResource: soundName, withExtension: ext ) {
             do {
-                let player = try AVAudioPlayer(contentsOf: soundURL)
-                player.play()
+                player = try AVAudioPlayer(contentsOf: soundURL)
+                player?.play()
             } catch {
                 print("Ses dosyasını çalarken bir hata oluştu: \(error.localizedDescription)")
             }
