@@ -1,4 +1,4 @@
-# RockPaperScissors
+# RockPaperScissors - UP School HW-2
 ### Sesi açınız :)
 
 https://github.com/tutunamayanlar2021/RockPaperScissors/assets/63172521/62dc154c-51e8-476c-9897-e44ebe327c7c
